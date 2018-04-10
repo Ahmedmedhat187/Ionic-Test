@@ -3,6 +3,7 @@ import { NavController  , ModalController } from 'ionic-angular';
 import { SecondPage } from '../second/second';
 import { ThreePage } from '../three/three';
 import { FourPage } from '../four/four';
+import { UserProvider } from '../../providers/user/user';
 
 
 @Component({
@@ -13,8 +14,10 @@ export class HomePage {
 
   data1 : any;
   data2 : any;
+  data3 : any;
+  data4 : any;
 
-  constructor(public navCtrl: NavController , public modalController:ModalController) {
+  constructor(public navCtrl: NavController , public modalController:ModalController , public user:UserProvider) {
 
   }
 
@@ -34,7 +37,16 @@ export class HomePage {
   }
 
 
+  next3(){
+    this.user.setData(this.data3);
+    console.log(this.data3);
+  }
 
 
+
+  next4(){
+    this.data4 = this.user.getData();
+    console.log(this.data4);
+  }
 
 }

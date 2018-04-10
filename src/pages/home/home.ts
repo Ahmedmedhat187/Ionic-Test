@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController  , ModalController } from 'ionic-angular';
+import { NavController  , ModalController,Events  } from 'ionic-angular';
 import { SecondPage } from '../second/second';
 import { ThreePage } from '../three/three';
 import { FourPage } from '../four/four';
@@ -17,9 +17,19 @@ export class HomePage {
   data3 : any;
   data4 : any;
 
-  constructor(public navCtrl: NavController , public modalController:ModalController , public user:UserProvider) {
+  constructor(public navCtrl: NavController , public modalController:ModalController , public user:UserProvider, public events:Events) {
 
   }
+
+  
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad FourPage');
+    this.events.subscribe("events" , data =>{
+      console.log("Home PAge : " ,data);
+    });
+  }
+
 
 
   next(){
@@ -48,5 +58,12 @@ export class HomePage {
     this.data4 = this.user.getData();
     console.log(this.data4);
   }
+
+
+  next5(){
+    this.navCtrl.push(FourPage);
+  }
+
+
 
 }

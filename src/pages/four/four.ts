@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,Events } from 'ionic-angular';
 
 /**
  * Generated class for the FourPage page.
@@ -15,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FourPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  data5 : any;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public events:Events) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FourPage');
   }
+
+
+
+  next5(){
+    this.events.publish("events" , this.data5);
+  }
+
 
 }

@@ -6,13 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>four</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>four</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+
+    <ion-card padding>
+        <ion-label>publish and subscribe data by Events </ion-label>
+        <input type="text" [(ngModel)]="data5"> {{data5}}
+        <button ion-button (click)="next5()"> Set  </button>
+    </ion-card>
+
+
 
 </ion-content>

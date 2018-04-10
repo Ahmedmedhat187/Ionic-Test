@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams , ViewController} from 'ionic-angular';
 
 /**
  * Generated class for the SecondPage page.
@@ -15,14 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SecondPage {
 
-  name = '';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  data1 = '';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SecondPage');
-    this.name = this.navParams.get("param1");
-    console.log(this.name);
+    this.data1 = this.navParams.get("param1");
+    console.log(this.data1);
   }
+
+
+
+
+
 
 }

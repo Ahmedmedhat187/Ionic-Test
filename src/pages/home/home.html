@@ -8,10 +8,19 @@
 
 <ion-content padding>
 
+    <ion-card padding>
+        <ion-label>Enter data to send to next page as parameter </ion-label>
+        <input type="text" [(ngModel)]="data1"> {{data1}}
+        <br>
+        <button ion-button (click)="next()"> Next Page  </button>
+    </ion-card>
 
-    <ion-label>Enter data to send to next page as parameter </ion-label>
-    <input type="text" [(ngModel)]="name"> {{name}}
-    <br>
-    <button ion-button (click)="next()"> Next Page  </button>
+    <br> <br>
+
+    <ion-card padding>
+        <ion-label> Modal Controller to receive data from second page </ion-label>
+        <br> {{data2}}
+        <button ion-button (click)="next2()"> Next Page  </button>
+    </ion-card>
 
 </ion-content>

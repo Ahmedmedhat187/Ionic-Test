@@ -6,7 +6,13 @@
     </ion-navbar>
 </ion-header>
 
+
+
 <ion-content padding>
+
+    <ion-item padding> Ionic : Passing Data Between Pages </ion-item>
+    <br> <br>
+
 
     <ion-card padding>
         <ion-label>Enter data to send to next page as parameter </ion-label>
@@ -14,35 +20,37 @@
         <br>
         <button ion-button (click)="next()"> Next Page  </button>
     </ion-card>
-
     <br> <br>
+
+
 
     <ion-card padding>
         <ion-label> Modal Controller to receive data from second page </ion-label>
         <br> {{data2}}
         <button ion-button (click)="next2()"> Next Page  </button>
     </ion-card>
-
-
     <br> <br>
+
+
 
     <ion-card padding>
         <ion-label>Set data to Provider </ion-label>
         <input type="text" [(ngModel)]="data3"> {{data3}}
         <button ion-button (click)="next3()"> Set  </button>
-
         <br>
         <ion-label> Get data from Provider {{data4}}</ion-label>
         <button ion-button (click)="next4()"> Set  </button>
     </ion-card>
-
-
-
     <br> <br>
+
+
+
 
     <ion-card padding>
         <ion-label>publish and subscribe data by Events </ion-label>
         <button ion-button (click)="next5()"> Set  </button>
     </ion-card>
+
+
 
 </ion-content>

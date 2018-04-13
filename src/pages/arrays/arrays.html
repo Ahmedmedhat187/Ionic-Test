@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>arrays</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="reset()"> Reset </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button (click)="filterData()"> filter </button>
+            <button ion-button (click)="map()"> map </button>
+            <button ion-button (click)="reduce()"> reduce </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let data of modifiedArray">
+            <ion-avatar item-left>
+                <img [src]="data.avatar">
+            </ion-avatar>
+            <h2>{{data.name}} </h2>
+            <p>{{data.number}} </p>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>

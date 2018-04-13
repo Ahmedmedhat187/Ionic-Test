@@ -22,9 +22,9 @@ export class ArraysPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.originalArray = [
       {name : "name1" , number : 100 , avatar : "http://placehold.it/100"},
-      {name : "name2" , number : 200 , avatar : "http://placehold.it/100"},
+      {name : "name4" , number : 200 , avatar : "http://placehold.it/100"},
       {name : "name3" , number : 300 , avatar : "http://placehold.it/100"},
-      {name : "name4" , number : 400 , avatar : "http://placehold.it/100"},
+      {name : "name2" , number : 400 , avatar : "http://placehold.it/100"},
       {name : "name5" , number : 500 , avatar : "http://placehold.it/100"},
     ];
     this.modifiedArray = JSON.parse(JSON.stringify(this.originalArray)); 
@@ -69,6 +69,19 @@ export class ArraysPage {
         return max;
     });
     console.log("max number: "  , most);
+  }
+
+
+
+  sortData(){
+    function compare(a,b) {
+      if (a.name < b.name)
+        return -1;
+      if (a.name > b.name)
+        return 1;
+      return 0;
+    }
+    this.modifiedArray.sort(compare);
   }
 
 

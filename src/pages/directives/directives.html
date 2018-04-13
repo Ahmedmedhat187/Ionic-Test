@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>directives</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-item *ngIf="!value">
+            <p>ng If is false</p>
+        </ion-item>
+        <p padding>ng If is false</p>
+        <br><br><br>
+    </ion-card>
+
+
+    <ion-card>
+        <ion-item *ngIf="value">
+            <p>ng If is true</p>
+        </ion-item>
+        <br><br><br>
+    </ion-card>
+
+
+
+    <ion-card>
+        <ion-item *ngFor="let d of data ; let i=index">
+            <p>the data element {{i}} : {{d}}</p>
+        </ion-item>
+        <br><br><br>
+    </ion-card>
+
+
+
+    <ion-card>
+        <ion-item [ngSwitch]="myName">
+            <p *ngSwitchCase="'name 1'">this is the chossen name : name 1</p>
+            <p *ngSwitchCase="'name 2'">this is the chossen name : name 2</p>
+            <p *ngSwitchCase="'name 3'">this is the chossen name : name 3</p>
+        </ion-item>
+        <br><br><br>
+    </ion-card>
+
+
+
+
+
+
+
+
+
+</ion-content>

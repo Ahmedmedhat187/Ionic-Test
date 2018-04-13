@@ -5,13 +5,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+import { UserProvider } from '../providers/user/user';
+
 import { HomePage } from '../pages/home/home';
 import { FirstPage } from '../pages/first/first';
 import { SecondPage } from '../pages/second/second';
 import { ThreePage } from '../pages/three/three';
 import { FourPage } from '../pages/four/four';
 import { ArraysPage } from '../pages/arrays/arrays';
-import { UserProvider } from '../providers/user/user';
+import { DirectivesPage } from '../pages/directives/directives';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { UserProvider } from '../providers/user/user';
     FourPage,
     FirstPage,
     ArraysPage,
+    DirectivesPage,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { UserProvider } from '../providers/user/user';
     FourPage,
     FirstPage,
     ArraysPage,
+    DirectivesPage,
   ],
   providers: [
     StatusBar,

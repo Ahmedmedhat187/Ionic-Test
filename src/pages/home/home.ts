@@ -3,6 +3,7 @@ import { NavController  , ModalController,Events  } from 'ionic-angular';
 import { UserProvider } from '../../providers/user/user';
 import { FirstPage } from '../first/first';
 import { ArraysPage } from '../arrays/arrays';
+import { DirectivesPage } from '../directives/directives';
 
 
 @Component({
@@ -36,13 +37,15 @@ export class HomePage {
   }
 
 
- 
-
 
   arrayss(){
     this.navCtrl.push(ArraysPage);
   }
 
 
+
+  directives(){
+    this.navCtrl.push(DirectivesPage);
+  }
 
 }
